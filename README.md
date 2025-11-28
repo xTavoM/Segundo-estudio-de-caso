@@ -10,10 +10,10 @@ Incluye inserción, eliminación, balanceo automático, cálculo de alturas, rot
 
 Funcionalidades principales
 
-- ✔ Inserción de nodos con rebalanceo automático  
-- ✔ Eliminación de nodos con rebalanceo  
-- ✔ Cálculo de alturas  
-- ✔ Factor de equilibrio  
-- ✔ Rotaciones: **LL, RR, LR, RL**  
-- ✔ Visualización del árbol en consola  
-- ✔ Menú interactivo en consola (Java)
+-  Inserción de nodos con rebalanceo automático  
+-  Eliminación de nodos con rebalanceo  
+-  Cálculo de alturas  
+-  Factor de equilibrio  
+-  Rotaciones: **LL, RR, LR, RL**  
+-  Visualización del árbol en consola  
+-  Menú interactivo en consola (Java)
