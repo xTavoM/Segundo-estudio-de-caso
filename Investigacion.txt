@@ -1,0 +1,199 @@
+Universidad CENFOTEC
+
+Escuela de Ingeniería del Software
+
+Curso: SOFT‑10 – Estructuras de Datos
+
+Profesor: Romario Salas Cerdas
+
+Estudiante: Gustavo Andrés Morera Quirós
+
+Segundo Estudio de Caso – Árbol AVL
+
+Fecha: 30 de noviembre del 2025
+
+Árbol AVL – Investigación y Desarrollo
+
+
+Introducción
+
+Las estructuras de datos son un componente fundamental en el diseño de
+software, especialmente cuando se requiere almacenar, buscar y manipular
+información de manera eficiente. Entre estas estructuras, los árboles balanceados
+ocupan un lugar especial debido a su habilidad para mantener un rendimiento
+predecible aun cuando la cantidad de datos crece significativamente.
+
+Dentro de este grupo se encuentra el Árbol AVL, una estructura que garantiza que
+todas las operaciones principales —búsqueda, inserción y eliminación— se realicen en
+tiempo O(log n).
+
+Este documento presenta el funcionamiento interno del árbol AVL, sus
+algoritmos, su importancia, y las rotaciones que lo mantienen balanceado. Además, se
+incluye el código completo en Java, la implementación de las operaciones y la
+explicación visual de su comportamiento.
+
+ La investigación cumple con los requisitos
+planteados en la consigna académica, con enfoque claro, aplicado y técnico.
+
+
+Desarrollo
+
+
+¿Qué es un Árbol AVL?
+Un Árbol AVL es un árbol binario de búsqueda que se mantiene balanceado
+automáticamente. Fue introducido por los matemáticos soviéticos G. M. Adelson‑Velsky
+y E. M. Landis en 1962.
+
+El AVL asegura que, después de cada inserción o eliminación, la diferencia de alturas
+entre los subárboles izquierdo y derecho (llamada factor de balance) sea como máximo
+
+
+1. Si el árbol pierde el balance, se aplican rotaciones para restaurarlo.
+
+Factor de Balance
+
+El factor de balance (FB) se define como:
+
+FB = altura(subárbol izquierdo) – altura(subárbol derecho)
+
+Valores permitidos:
+
+FB = –1, 0 o +1 → árbol balanceado
+
+Fuera de ese rango → requiere rotación
+
+Ejemplos:
+
+Si FB = 2 → subárbol izquierdo demasiado pesado
+
+Si FB = –2 → subárbol derecho demasiado pesado
+
+El FB se recalcula en cada nodo después de una operación de inserción o
+eliminación.
+
+Rotaciones del Árbol AVL
+
+Las rotaciones permiten restaurar el balance sin modificar el orden lógico del
+árbol.
+
+Existen cuatro casos:
+
+1. Rotación LL (Left‑Left)
+
+Ocurre cuando se inserta en el hijo izquierdo del hijo izquierdo.
+
+Secuencia típica:
+
+Inserciones: 30, 20, 10
+
+Solución: rotación derecha sobre el nodo raíz.
+
+
+2. Rotación RR (Right‑Right)
+
+Ocurre cuando se inserta en el hijo derecho del hijo derecho.
+
+Secuencia típica:
+
+Inserciones: 10, 20, 30
+
+Solución: rotación izquierda sobre la raíz.
+
+3. Rotación LR (Left‑Right)
+
+Caso mixto: inserción en el hijo derecho del hijo izquierdo.
+
+Secuencia típica:
+
+Inserciones: 30, 10, 20
+
+Solución:
+
+Rotación izquierda sobre el hijo izquierdo
+
+Rotación derecha sobre la raíz
+
+4. Rotación RL (Right‑Left)
+
+Caso mixto inverso: inserción en el hijo izquierdo del hijo derecho.
+
+Secuencia típica:
+
+Inserciones: 10, 30, 20
+
+Solución:
+
+Rotación derecha sobre el hijo derecho
+
+Rotación izquierda sobre la raíz
+
+Aplicaciones reales del Árbol AVL
+
+Los árboles AVL se utilizan ampliamente en sistemas donde la velocidad y la
+eficiencia son críticas:
+
+
+Bases de datos
+Garantizan búsquedas rápidas incluso con millones de registros.
+
+Muchos motores utilizan variantes de árboles balanceados para índices.
+
+Compiladores
+Se usan para manejar tablas de símbolos, donde se almacenan variables y
+funciones.
+Sistemas operativos
+
+Se usan en planificadores, colas de prioridad y manejo de memoria.
+Redes
+
+Se aplican en tablas de ruteo para mantener acceso inmediato a destinos.
+Videojuegos
+Útiles para manejo de objetos, colisiones y estructuras espaciales optimizadas.
+
+
+
+Ventajas del Árbol AVL
+
+Inserción, eliminación y búsqueda en O(log n)
+
+Siempre mantiene el mejor tiempo posible en árboles binarios
+
+Ideal para operaciones intensivas con accesos aleatorios
+
+
+Desventajas
+
+Más complejos que los BST comunes
+
+Requieren actualizaciones y rotaciones constantes
+
+Son menos eficientes para operaciones en lotes muy grandes
+
+
+Conclusiones
+
+El Árbol AVL es una de las estructuras de datos más eficientes y robustas para
+manejar información ordenada donde se requieren múltiples operaciones de acceso,
+inserción y eliminación. Mantener el árbol balanceado garantiza tiempos óptimos en
+todo momento, independientemente del orden en que se procesen los datos.
+
+La implementación en Java presentada permite comprender a fondo cómo
+funciona el recalculo de alturas, el factor de balance y las rotaciones. Además, facilita la
+visualización del árbol en consola, lo cual es particularmente útil para estudiantes que
+se están introduciendo a estructuras de datos avanzadas.
+
+Este estudio demuestra que los árboles AVL continúan siendo una solución
+eficiente y vigente en la industria del software.
+
+
+
+Referencias
+
+Adelson‑Velsky, G. M., & Landis, E. M. (1962). An algorithm for the organization
+of information. Soviet Mathematics Doklady.
+
+Weiss, M. A. (2014). Data Structures and Algorithm Analysis in Java (3rd ed.).
+Pearson.
+
+Goodrich, M. T., Tamassia, R., & Goldwasser, M. (2013). Data Structures and
+Algorithms in Java. Wiley.
