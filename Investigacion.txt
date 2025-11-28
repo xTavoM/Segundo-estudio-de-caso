@@ -134,11 +134,13 @@ eficiencia son críticas:
 
 
 Bases de datos
+
 Garantizan búsquedas rápidas incluso con millones de registros.
 
 Muchos motores utilizan variantes de árboles balanceados para índices.
 
 Compiladores
+
 Se usan para manejar tablas de símbolos, donde se almacenan variables y
 funciones.
 Sistemas operativos
@@ -148,6 +150,7 @@ Redes
 
 Se aplican en tablas de ruteo para mantener acceso inmediato a destinos.
 Videojuegos
+
 Útiles para manejo de objetos, colisiones y estructuras espaciales optimizadas.
 
 
